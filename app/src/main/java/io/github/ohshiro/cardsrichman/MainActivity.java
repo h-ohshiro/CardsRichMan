@@ -1,46 +1,18 @@
 package io.github.ohshiro.cardsrichman;
 
-import android.annotation.SuppressLint;
-import android.app.Activity;
 import android.app.AlertDialog;
-import android.content.Context;
-import android.content.DialogInterface;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.View;
-import android.view.View.OnClickListener;
-import android.widget.Button;
 import android.widget.ToggleButton;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
-
-import com.google.android.gms.ads.AdError;
-import com.google.android.gms.ads.AdListener;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
-
-import com.google.android.gms.ads.FullScreenContentCallback;
-import com.google.android.gms.ads.LoadAdError;
-import com.google.android.gms.ads.MobileAds;
-import com.google.android.gms.ads.OnPaidEventListener;
-import com.google.android.gms.ads.ResponseInfo;
-import com.google.android.gms.ads.initialization.InitializationStatus;
-import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
-import com.google.android.gms.ads.interstitial.InterstitialAd;
-import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback;
 
 
-public class MainActivity<DialogTest1Activity> extends AppCompatActivity {
-
-
+public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         final ToggleButton button1 = findViewById(R.id.toggleButton1);
         final ToggleButton button2 = findViewById(R.id.toggleButton2);
         final ToggleButton button3 = findViewById(R.id.toggleButton3);
@@ -95,7 +67,7 @@ public class MainActivity<DialogTest1Activity> extends AppCompatActivity {
         final ToggleButton button51 = findViewById(R.id.toggleButton51);
         final ToggleButton button52 = findViewById(R.id.toggleButton52);
 
-        ((Button)findViewById(R.id.clear))
+        findViewById(R.id.clear)
                 .setOnClickListener(v -> new AlertDialog.Builder(MainActivity.this)
                         .setTitle(R.string.title)
                         .setPositiveButton(
